@@ -1,0 +1,41 @@
+<!--
+  Generated template for the DecorationhistoryPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar color="theme">
+  	<button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Decoration History</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+	<ion-card color="theme">
+		<ion-card-header>
+			Room : 201
+		</ion-card-header>
+	</ion-card>
+
+	<ion-list>
+	  <ion-item>
+		    <h2>Request ID : 9</h2>
+		    <p>Name : Adinan Soseesuk</p>
+		    <p>Status : Approve</p>
+		    <p>Date : 2017-09-21</p>
+		    <p>Topic : Noisy2</p>
+		    <p>Desc : <marquee>The room next to me</marquee></p>
+		    <p>Remark : ระบบได้รับเรื่องของท่านแล้ว</p>
+		    <br>
+		    <button ion-button color="correct">Edit</button>
+		    <button ion-button color="danger" (click)='showalertdelete()'>Delete</button>
+		</ion-item>
+	</ion-list>
+	<hr>
+</ion-content>
