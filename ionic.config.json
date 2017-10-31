@@ -2,5 +2,7 @@
   "name": "sidemenuCondo",
   "app_id": "",
   "type": "ionic-angular",
-  "integrations": {}
+  "integrations": {
+    "cordova": {}
+  }
 }

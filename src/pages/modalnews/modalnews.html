@@ -7,7 +7,7 @@
 <ion-header>
   <ion-toolbar>
     <ion-title>
-      ใส่หัวข้อข่าว
+      {{news.news_topic}}
     </ion-title>
     <ion-buttons start>
       <button ion-button (click)="dismiss()">
@@ -18,13 +18,6 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
-
-	<ion-card>
-	<img src='../assets/img/pic1.jpg'>
-		<ion-item>
-			น้ำไม่ไหล บลาๆๆๆๆๆ (เนื้อหาในข่าว)
-		</ion-item>
-  	</ion-card>
-
+<ion-content style="padding-left: 10px; padding-right: 10px">
+  <div [innerHtml]="news.news_desc"></div>
 </ion-content>

@@ -22,35 +22,15 @@
 <ion-content padding>
     <ion-searchbar (ionInput)="getItems($event)"></ion-searchbar>
       
-    <ion-card (click)='presentModal()'>
-        <img src='../assets/img/pic1.jpg'>
+    <ion-card *ngFor="let news of newsList" (click)='presentModal(news)'>
+        <img src='assets/img/{{news.cate}}.jpg'>
         <ion-card-content>
           <ion-card-title>
-            น้ำไม่ไหล 
+            {{news.news_topic}} 
             </ion-card-title>
-          <p>
-            น้ำไม่ไหล เวลา 15.00-16.00 น.
-          </p>
           <h2 style="color: orange;">
-            13/09/2017
+            {{news.end_date}}
           </h2>
         </ion-card-content>
     </ion-card>
-
-    <ion-card>
-        <img src='../assets/img/pic1.jpg'>
-        <ion-card-content>
-          <ion-card-title>
-            สำนักงานนิติบุคคล งดให้บริการชั่วคราว
-            </ion-card-title>
-          <p>
-            ปิดให้บริการวันที่ 11/09/2017
-          </p>
-          <h2 style="color: orange;">
-            11/09/2017
-          </h2>
-        </ion-card-content>
-    </ion-card>
-
-
 </ion-content>
