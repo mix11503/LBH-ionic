@@ -31,7 +31,7 @@ export class NewsProvider {
   }
 
   loadNews(): Observable<News[]>{
-    return this.http.get(this.conn.severPathAPI).map(res => res.json());
+    return this.http.post(this.conn.severPathAPI+'/News','').map(res => res.json());
   }
 
 }

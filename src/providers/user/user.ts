@@ -11,10 +11,10 @@ import 'rxjs/add/operator/map';
 @Injectable()
 export class UserProvider {
 
-  userId : string;
+  roomId : string;
 
   constructor(public http: Http) {
-    this.userId = '201';
+    this.roomId = '202';
   }
 
 }

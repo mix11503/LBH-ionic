@@ -20,38 +20,18 @@
 
 	<ion-card color="theme">
 		<ion-card-header>
-			Room : 201
+			Room : {{roomId}}
 		</ion-card-header>
 	</ion-card>
 
-	<ion-list>
-	  <ion-item>
-		    <h2>Request ID : 9</h2>
-		    <p>Date : 2017-09-21</p>
-		    <p>Topic : Noisy2</p>
-		    <p>Desc : <marquee>The room next to me</marquee></p>
-		    Remark : ระบบได้รับเรื่องของท่านแล้ว
+	<ion-list >
+	  <ion-item *ngFor="let pbm of pbmList">
+		    <h2>Request ID : {{pbm.id}}</h2>
+		    <p>Date : {{pbm.reqDate}}</p>
+		    <p>Topic : {{pbm.topic}}</p>
+		    <p>Desc : <marquee>{{pbm.desc}}</marquee></p>
+				Remark : <div *ngIf="pbm.status; then showFalse">เจ้าหน้าที่ได้รับทราบปัญหาของท่านแล้ว และจะดำเนินการแก้ไขต่อไป</div>
+								<ng-template #showFalse>ระบบได้รับเรื่องของท่านแล้ว</ng-template>
 		</ion-item>
 	</ion-list>
-	<hr>
-	<ion-list>
-	  <ion-item>
-		    <h2>Request ID : 9</h2>
-		    <p>Date : 2017-09-21</p>
-		    <p>Topic : Noisy2</p>
-		    <p>Desc : <marquee>The room next to me</marquee></p>
-		    Remark : ระบบได้รับเรื่องของท่านแล้ว
-		</ion-item>
-	</ion-list>
-	<hr>
-	<ion-list>
-	  <ion-item>
-		    <h2>Request ID : 9</h2>
-		    <p>Date : 2017-09-21</p>
-		    <p>Topic : Noisy2</p>
-		    <p>Desc : <marquee>The room next to me</marquee></p>
-		    Remark : เจ้าหน้าที่ได้รับทราบปัญหาของท่านแล้ว และจำดำเนินการแก้ไขต่อไป
-		</ion-item>
-	</ion-list>
-
 </ion-content>

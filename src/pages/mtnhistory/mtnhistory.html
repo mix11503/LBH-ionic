@@ -19,21 +19,14 @@
 <ion-content padding>
 
 	<ion-item>
-		<h2 style="color:grey;">Room : (201)</h2>
+		<h2 style="color:grey;">Room : ({{roomId}})</h2>
 	</ion-item>
 
 	<ion-list>
-	  <ion-item>
-		    <h2>Livingroom</h2>
-		    <p>Date : ............</p>
-		    <p>Status : ............</p>
-		    <button ion-button clear item-end (click)="MtnhistoryshowPage()">View</button>
-	  </ion-item>
-
-	  <ion-item>
-		    <h2>Panrty</h2>
-		    <p>Date : ............</p>
-		    <p>Status : ............</p>
+	  <ion-item *ngFor="let mtn of mtnList">
+		    <h2>{{mtn.mtn_ServiceArea}}</h2>
+		    <p>Date : {{mtn.mtn_date}}</p>
+		    <p>Status : {{mtn.mtn_status}}</p>
 		    <button ion-button clear item-end (click)="MtnhistoryshowPage()">View</button>
 	  </ion-item>
 	</ion-list>

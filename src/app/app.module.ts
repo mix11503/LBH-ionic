@@ -27,6 +27,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import { UserProvider } from '../providers/user/user';
 import { ConnectionProvider } from '../providers/connection/connection';
 import { NewsProvider } from '../providers/news/news';
+import { MaintenanceReqProvider } from '../providers/maintenance-req/maintenance-req';
+import { ProblemRepProvider } from '../providers/problem-rep/problem-rep';
 
 @NgModule({
   declarations: [
@@ -79,7 +81,9 @@ import { NewsProvider } from '../providers/news/news';
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     UserProvider,
     ConnectionProvider,
-    NewsProvider
+    NewsProvider,
+    MaintenanceReqProvider,
+    ProblemRepProvider
   ]
 })
 export class AppModule {}

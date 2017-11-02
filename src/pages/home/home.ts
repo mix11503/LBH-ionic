@@ -12,9 +12,10 @@ export class HomePage {
 
   newsList:News[] =[]; 
 
-  constructor(public navCtrl: NavController , public modalCtrl: ModalController, public newsProv: NewsProvider) {
-    this.newsProv.loadNews().subscribe(data => { this.newsList = data;
-                                                console.log(this.newsList);});
+  constructor(public navCtrl: NavController , 
+              public modalCtrl: ModalController, 
+              public newsProv: NewsProvider) {
+    this.newsProv.loadNews().subscribe(data => { this.newsList = data });
   }
 
    presentModal(news: News) {

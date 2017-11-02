@@ -14,7 +14,7 @@ export class ConnectionProvider {
   severPathAPI : string;
 
   constructor(public http: Http) {
-    this.severPathAPI ='http://52.220.19.105:8080/LibraryHouzeAdmin-M/API';
+    this.severPathAPI ='http://52.220.19.105:8080/LBH/API';
   }
 
 }

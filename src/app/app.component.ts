@@ -63,7 +63,7 @@ export class MyApp {
   }
 
   openPage(page:any) {
- this.nav.setRoot(page);
+    this.nav.setRoot(page);
    // this.nav.setRoot(page.component);
   }
 
