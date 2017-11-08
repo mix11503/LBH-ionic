@@ -25,19 +25,19 @@
 		  </ion-card-header>
 	</ion-card>
 
-	<ion-card>
+	<ion-card *ngFor="let parcel of parcelList">
 		  <ion-card-header>
-		    Date : 18/10/2017
+		    Date : {{parcel.date}}
 		  </ion-card-header>
 		  <ion-card-content>
 		  	<ion-label>
-		    	Room : 201
+		    	Room : {{parcel.roomId}}
 		    </ion-label>
 		    <ion-label>
-		    	Dear : Adinan Soseesuk 
+		    	Dear : {{parcel.name}} 
 		    </ion-label>
 		    <ion-label>
-		    	Parcel Barcode : EN452232TH
+		    	Parcel Barcode : {{parcel.barcode}}
 		    </ion-label>
 		    <ion-label color="danger">
 		    	Please contact at condo staff in office hours.
@@ -46,33 +46,8 @@
 		    	Your parcel will be kept for 30 days
 		    </ion-label>
 		    <ion-label color="correct">
-		    	Status : available
-		    </ion-label>
-		  </ion-card-content>
-	</ion-card>
-
-	<ion-card>
-		  <ion-card-header>
-		    Date : 8/10/2017
-		  </ion-card-header>
-		  <ion-card-content>
-		  	<ion-label>
-		    	Room : 201
-		    </ion-label>
-		    <ion-label>
-		    	Dear : Adinan Soseesuk 
-		    </ion-label>
-		    <ion-label>
-		    	Parcel Barcode : EN4522325588TH
-		    </ion-label>
-		    <ion-label color="danger">
-		    	Please contact at condo staff in office hours.
-		    </ion-label>
-		    <ion-label color="danger">
-		    	Your parcel will be kept for 30 days
-		    </ion-label>
-		    <ion-label color="correct">
-		    	Status : Picked, 2017-10-10 21:04:25
+					Status : <div *ngIf="parcel.status; else showFalse">Picked, {{parcel.pickStamp}}</div>
+									<ng-template #showFalse>Available</ng-template>
 		    </ion-label>
 		  </ion-card-content>
 	</ion-card>
