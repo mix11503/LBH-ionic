@@ -29,6 +29,7 @@ import { ConnectionProvider } from '../providers/connection/connection';
 import { NewsProvider } from '../providers/news/news';
 import { MaintenanceReqProvider } from '../providers/maintenance-req/maintenance-req';
 import { ProblemRepProvider } from '../providers/problem-rep/problem-rep';
+import { ParcelProvider } from '../providers/parcel/parcel';
 
 @NgModule({
   declarations: [
@@ -85,7 +86,8 @@ import { ProblemRepProvider } from '../providers/problem-rep/problem-rep';
     ConnectionProvider,
     NewsProvider,
     MaintenanceReqProvider,
-    ProblemRepProvider
+    ProblemRepProvider,
+    ParcelProvider
   ]
 })
 export class AppModule {}
