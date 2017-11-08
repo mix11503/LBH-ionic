@@ -20,7 +20,7 @@ import { DecorationhistoryPage } from '../pages/decorationhistory/decorationhist
 import { StuffmovingrequestPage } from '../pages/stuffmovingrequest/stuffmovingrequest';
 import { StuffmovinghistoryPage } from '../pages/stuffmovinghistory/stuffmovinghistory';
 import { PhonebookPage } from '../pages/phonebook/phonebook';
-
+import { LoginPage } from '../pages/login/login';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -48,7 +48,8 @@ import { ProblemRepProvider } from '../providers/problem-rep/problem-rep';
     DecorationhistoryPage,
     StuffmovingrequestPage,
     StuffmovinghistoryPage,
-    PhonebookPage
+    PhonebookPage,
+    LoginPage
   ],
   imports: [
     BrowserModule,
@@ -73,7 +74,8 @@ import { ProblemRepProvider } from '../providers/problem-rep/problem-rep';
     DecorationhistoryPage,
     StuffmovingrequestPage,
     StuffmovinghistoryPage,
-    PhonebookPage
+    PhonebookPage,
+    LoginPage
   ],
   providers: [
     StatusBar,

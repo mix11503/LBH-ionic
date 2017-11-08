@@ -17,6 +17,7 @@ import { DecorationhistoryPage } from '../pages/decorationhistory/decorationhist
 import { StuffmovingrequestPage } from '../pages/stuffmovingrequest/stuffmovingrequest';
 import { StuffmovinghistoryPage } from '../pages/stuffmovinghistory/stuffmovinghistory';
 import { PhonebookPage } from '../pages/phonebook/phonebook';
+import { LoginPage } from '../pages/login/login';
 
 
 
@@ -39,6 +40,7 @@ export class MyApp {
   StuffmovingrequestPage:any = StuffmovingrequestPage;
   StuffmovinghistoryPage:any = StuffmovinghistoryPage;
   PhonebookPage:any = PhonebookPage;
+  LoginPage:any = LoginPage;
 
   @ViewChild(Nav) nav: Nav;
 

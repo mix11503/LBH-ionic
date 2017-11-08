@@ -51,6 +51,7 @@
     <ion-item (click)="menuItemHandlerphonebook()"> <ion-icon name="md-call"></ion-icon>
     Contact Staff </ion-item>
       <ion-item submenu-item *ngIf="showsubmenuphonebook" (click)="openPage(PhonebookPage)">Phonebook</ion-item>
+       <ion-item submenu-item *ngIf="showsubmenuphonebook" (click)="openPage(LoginPage)">Login</ion-item>
 
   </ion-list>
 </ion-content>
