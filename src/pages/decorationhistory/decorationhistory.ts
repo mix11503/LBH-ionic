@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
 import { AlertController } from 'ionic-angular';
+import { Decoration, DecorationProvider } from '../../providers/decoration/decoration';
+import { UserProvider } from '../../providers/user/user';
 
 /**
  * Generated class for the DecorationhistoryPage page.
@@ -15,8 +17,16 @@ import { AlertController } from 'ionic-angular';
 })
 export class DecorationhistoryPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams
-  	,public alertCtrl: AlertController) {
+  roomId: string;
+  decList: Decoration[] = [];
+
+  constructor(public navCtrl: NavController, 
+  	          public alertCtrl: AlertController,
+              public navParams: NavParams,
+              public user: UserProvider,
+              public decProv: DecorationProvider){
+    this.roomId = this.user.roomId;
+    this.decProv.loadDec().subscribe(data => { this.decList = data });
   }
 
   ionViewDidLoad() {

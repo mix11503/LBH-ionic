@@ -18,19 +18,12 @@
 
 <ion-content padding>
 	<ion-list>
-	  <ion-item>
-		    <h2>Technician</h2>
-		    <p>Name : Michael Scofield</p>
-		    <p>Tel : 0982691707</p>
-		    <p>Avaliable 09:00 to 18:00</p>
-		    <button ion-button color="correct">Call</button>
-		</ion-item>
-		<ion-item>
-		    <h2>Security</h2>
-		    <p>Name : Sara Scofield</p>
-		    <p>Tel : 0982691801</p>
-		    <p>Avaliable 09:00 to 18:00</p>
-		    <button ion-button color="correct">Call</button>
+	  <ion-item *ngFor="let staff of staffList">
+		    <h2>{{staff.Division}}</h2>
+		    <p>Name : {{staff.name}} {{staff.lastname}} ({{staff.nickname}})</p>
+		    <p>Tel : 0{{staff.tel}}</p>
+		    <p>Avaliable {{staff.start}} to {{staff.end}}</p>
+		    <button ion-button color="correct" (click)="call(staff.tel)">Call</button>
 		</ion-item>
 	</ion-list>
 

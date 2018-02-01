@@ -30,6 +30,14 @@ import { NewsProvider } from '../providers/news/news';
 import { MaintenanceReqProvider } from '../providers/maintenance-req/maintenance-req';
 import { ProblemRepProvider } from '../providers/problem-rep/problem-rep';
 import { ParcelProvider } from '../providers/parcel/parcel';
+import { DecorationProvider } from '../providers/decoration/decoration';
+import { MovingStuffProvider } from '../providers/moving-stuff/moving-stuff';
+import { StaffProvider } from '../providers/staff/staff';
+import { KeycardProvider } from '../providers/keycard/keycard';
+
+import { CallNumber } from '@ionic-native/call-number';
+import { OneSignal } from '@ionic-native/onesignal';
+
 
 @NgModule({
   declarations: [
@@ -87,7 +95,13 @@ import { ParcelProvider } from '../providers/parcel/parcel';
     NewsProvider,
     MaintenanceReqProvider,
     ProblemRepProvider,
-    ParcelProvider
+    ParcelProvider,
+    DecorationProvider,
+    MovingStuffProvider,
+    StaffProvider,
+    CallNumber,
+    KeycardProvider,
+    OneSignal
   ]
 })
 export class AppModule {}

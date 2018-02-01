@@ -15,47 +15,59 @@
 
 <ion-content>
   <ion-list id="sidenav">
-
+    
     <ion-item (click)="openPage(HomePage)"> <ion-icon name="albums"></ion-icon> News Feed</ion-item>
     <ion-item (click)="menuItemHandler()"> <ion-icon name="build"></ion-icon>
-    Maintenance </ion-item>
-      <ion-item submenu-item *ngIf="showSubmenu" (click)="openPage(MaintenancePage)">Create Request</ion-item>
+      Maintenance </ion-item>
+      <!--
+        <ion-item submenu-item *ngIf="showSubmenu" (click)="openPage(MaintenancePage)">Create Request</ion-item>
+      -->
       <ion-item submenu-item *ngIf="showSubmenu" (click)="openPage(MtnhistoryPage)">Request History</ion-item>
-
+      
     <ion-item (click)="menuItemHandlerproblemreport()"> <ion-icon name="document"></ion-icon> Problem Report</ion-item>
-      <ion-item submenu-item *ngIf="showsubmenuproblemreport" (click)="openPage(ReportproblemPage)">Report Problem</ion-item>
+      <!--
+        <ion-item submenu-item *ngIf="showsubmenuproblemreport" (click)="openPage(ReportproblemPage)">Report Problem</ion-item>
+      -->
       <ion-item submenu-item *ngIf="showsubmenuproblemreport" (click)="openPage(ProblemhistoryPage)">Report Problem History</ion-item>
-
-    <ion-item (click)="menuItemHandlerkeycard()"> <ion-icon name="key"></ion-icon>
-    KeyCard </ion-item>
-      <ion-item submenu-item *ngIf="showSubmenukeycard" (click)="openPage(KeycardPage)">Keycard Request</ion-item>
-
-    <ion-item (click)="menuItemHandlerbluetooth()"> <ion-icon name="md-car"></ion-icon>
-    Bluetooth in car</ion-item>
-      <ion-item submenu-item *ngIf="showsubmenubluetooth" (click)="openPage(BluetoothPage)">Bluetooth Request</ion-item>
-
+      
+      <!--
+        <ion-item (click)="menuItemHandlerkeycard()"> <ion-icon name="key"></ion-icon>
+          KeyCard </ion-item>
+          <ion-item submenu-item *ngIf="showSubmenukeycard" (click)="openPage(KeycardPage)">Keycard Request</ion-item>
+          
+        <ion-item (click)="menuItemHandlerbluetooth()"> <ion-icon name="md-car"></ion-icon>
+          Bluetooth in car</ion-item>
+          <ion-item submenu-item *ngIf="showsubmenubluetooth" (click)="openPage(BluetoothPage)">Bluetooth Request</ion-item>
+      -->
+          
     <ion-item (click)="menuItemHandlerparcel()"> <ion-icon name="mail"></ion-icon>
-    Parcel </ion-item>
+      Parcel </ion-item>
       <ion-item submenu-item *ngIf="showsubmenuparcel" (click)="openPage(ParcelinboxPage)">Parcel Inbox</ion-item>
-
+      
     <ion-item (click)="menuItemHandlerdecoration()"> <ion-icon name="document"></ion-icon> Decoration</ion-item>
-      <ion-item submenu-item *ngIf="showsubmenudecoration" (click)="openPage(DecorationrequestPage)">Decoration Request</ion-item>
+      <!--
+        <ion-item submenu-item *ngIf="showsubmenudecoration" (click)="openPage(DecorationrequestPage)">Decoration Request</ion-item>
+      -->
       <ion-item submenu-item *ngIf="showsubmenudecoration" (click)="openPage(DecorationhistoryPage)">Decoration History</ion-item>
-
-      <ion-item (click)="menuItemHandlerstuffmoving()"> <ion-icon name="mail"></ion-icon>
-    Stuff Moving </ion-item>
-      <ion-item submenu-item *ngIf="showsubmenustuffmoving" (click)="openPage(StuffmovingrequestPage)">Request for moving</ion-item>
+            
+    <ion-item (click)="menuItemHandlerstuffmoving()"> <ion-icon name="mail"></ion-icon>
+      Stuff Moving </ion-item>
+      <!--
+        <ion-item submenu-item *ngIf="showsubmenustuffmoving" (click)="openPage(StuffmovingrequestPage)">Request for moving</ion-item>
+      -->
       <ion-item submenu-item *ngIf="showsubmenustuffmoving" (click)="openPage(StuffmovinghistoryPage)">Request History</ion-item>
-
-
+              
     <ion-item (click)="menuItemHandlerphonebook()"> <ion-icon name="md-call"></ion-icon>
-    Contact Staff </ion-item>
+      Contact Staff </ion-item>
       <ion-item submenu-item *ngIf="showsubmenuphonebook" (click)="openPage(PhonebookPage)">Phonebook</ion-item>
-       <ion-item submenu-item *ngIf="showsubmenuphonebook" (click)="openPage(LoginPage)">Login</ion-item>
-
-  </ion-list>
+      <!--        
+        <ion-item submenu-item *ngIf="showsubmenuphonebook" (click)="openPage(LoginPage)">Login</ion-item>
+      -->          
+    </ion-list>
 </ion-content>
-
+            
 </ion-menu>
-
+          
 <ion-nav [root]="rootPage" #content swipeBackEnabled="false"></ion-nav>
+          
+          

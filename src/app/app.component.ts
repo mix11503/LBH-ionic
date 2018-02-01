@@ -18,6 +18,7 @@ import { StuffmovingrequestPage } from '../pages/stuffmovingrequest/stuffmovingr
 import { StuffmovinghistoryPage } from '../pages/stuffmovinghistory/stuffmovinghistory';
 import { PhonebookPage } from '../pages/phonebook/phonebook';
 import { LoginPage } from '../pages/login/login';
+import { OneSignal } from '@ionic-native/onesignal';
 
 
 
@@ -48,7 +49,7 @@ export class MyApp {
 
   pages: Array<{title: string, component: any}>;
 
-  constructor(public platform: Platform, public statusBar: StatusBar, public splashScreen: SplashScreen) {
+  constructor(public platform: Platform, public statusBar: StatusBar, public splashScreen: SplashScreen, public oneSignal: OneSignal) {
     this.initializeApp();
 
     // used for an example of ngFor and navigation
@@ -59,6 +60,22 @@ export class MyApp {
     this.platform.ready().then(() => {
       // Okay, so the platform is ready and our plugins are available.
       // Here you can do any higher level native things you might need.
+      this.oneSignal.startInit('ad05f2e7-20a3-4e8d-b8fc-006362a35cfc', '860740804614');
+      
+      //this.oneSignal.inFocusDisplaying(this.oneSignal.OSInFocusDisplayOption.InAppAlert);
+      
+      this.oneSignal.handleNotificationReceived().subscribe(() => {
+       // do something when notification is received
+      });
+      
+      this.oneSignal.handleNotificationOpened().subscribe(() => {
+        // do something when a notification is opened
+      });
+      
+      this.oneSignal.endInit();
+
+      this.oneSignal.sendTags({'floor':'2','room':'202'});
+
       this.statusBar.styleDefault();
       this.splashScreen.hide();
     });

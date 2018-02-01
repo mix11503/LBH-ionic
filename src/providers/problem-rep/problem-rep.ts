@@ -29,7 +29,7 @@ export class ProblemRepProvider {
   }
 
   loadProblem(): Observable<ProblemRep[]>{
-    return  this.http.get(this.conn.severPathAPI+'/Problem?roomId=202')
+    return  this.http.get(this.conn.severPathAPI+'/Problem?roomId='+this.user.roomId)
               //{
                 //roomId: this.user.roomId
               //})

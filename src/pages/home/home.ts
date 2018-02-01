@@ -3,6 +3,7 @@ import { NavController } from 'ionic-angular';
 import { ModalnewsPage } from '../modalnews/modalnews';
 import { ModalController } from 'ionic-angular';
 import { News, NewsProvider } from '../../providers/news/news';
+import { OneSignal } from '@ionic-native/onesignal';
 
 @Component({
   selector: 'page-home',
@@ -14,7 +15,8 @@ export class HomePage {
 
   constructor(public navCtrl: NavController , 
               public modalCtrl: ModalController, 
-              public newsProv: NewsProvider) {
+              public newsProv: NewsProvider,
+              private oneSignal: OneSignal) {
     this.newsProv.loadNews().subscribe(data => { this.newsList = data });
   }
 

@@ -7,20 +7,11 @@
     <ion-title>
       Welcome (Username)
     </ion-title>
-
-    <ion-buttons end>
-      <button ion-button icon-only>
-        <ion-icon name="md-notifications"></ion-icon>
-      </button>
-    </ion-buttons>
-
-
   </ion-navbar>
 
 </ion-header>
 
 <ion-content padding>
-    <ion-searchbar (ionInput)="getItems($event)"></ion-searchbar>
       
     <ion-card *ngFor="let news of newsList" (click)='presentModal(news)'>
         <img src='assets/img/{{news.cate}}.jpg'>

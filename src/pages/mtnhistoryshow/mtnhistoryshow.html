@@ -19,18 +19,18 @@
 <ion-content padding>
 			<ion-card color="theme">
 			  <ion-card-header>
-			    Reauest Detail
+			    Request Detail
 			  </ion-card-header>
 			</ion-card>
 
 			<ion-item>
 			    <ion-label>Form ID :</ion-label>
-			    <ion-input type="text" placeholder="1004" disable></ion-input>
+			    <ion-input type="text" placeholder="{{mtnReq.mtn_id}}" disable></ion-input>
 		  	</ion-item>
 
 		  	<ion-item>
 			    <ion-label>Date :</ion-label>
-			    <ion-input type="text" placeholder="2017-01-19" disable></ion-input>
+			    <ion-input type="text" placeholder="{{mtnReq.mtn_date}}" disable></ion-input>
 		  	</ion-item>
 
 		  	<ion-card color="theme">
@@ -41,18 +41,23 @@
 
 			<ion-item>
 			    <ion-label>Service Area :</ion-label>
-			    <ion-input type="text" placeholder="balcony" disable></ion-input>
+			    <ion-input type="text" placeholder="{{mtnReq.mtn_ServiceArea}}" disable></ion-input>
 		  	</ion-item>
 
 		  	<ion-item>
 			    <ion-label>Broken stuff :</ion-label>
-			    <ion-input type="text" placeholder="null" disable></ion-input>
+			    <ion-input type="text" placeholder="{{mtnReq.mtn_area_stuff}}" disable></ion-input>
 		  	</ion-item>
 
 		  	<ion-item>
 			    <ion-label>Description :</ion-label>
-			    <ion-input type="text" placeholder="A socket broke" disable></ion-input>
-		  	</ion-item>
+			    <ion-input type="text" placeholder="{{mtnReq.mtn_desc}}" disable></ion-input>
+				</ion-item>
+				<ion-item>
+					<div *ngFor="let pic of mtnReq.mtn_pic">
+						<img src="http://52.220.19.105:8080/LBH/{{pic}}">
+					</div>
+				</ion-item>
 
 		  	<ion-card color="theme">
 			  <ion-card-header>
@@ -62,67 +67,15 @@
 
 			<ion-item>
 			    <ion-label>Result :</ion-label>
-			    <ion-input type="text" placeholder="Change" disable></ion-input>
+			    <ion-input type="text" placeholder="{{mtnReq.mtn_result}}" disable></ion-input>
 		  	</ion-item>
 		  	<ion-item>
 			    <ion-label>Materials :</ion-label>
-			    <ion-input type="text" placeholder="New Socket" disable></ion-input>
+			    <ion-input type="text" placeholder="{{mtnReq.mtn_material}}" disable></ion-input>
 		  	</ion-item>
 
 		  	<ion-item>
 			    <ion-label>Cost :</ion-label>
-			    <ion-input type="text" placeholder="700.00" disable></ion-input>
+			    <ion-input type="text" placeholder="{{mtnReq.mtn_cost}}" disable></ion-input>
 		  	</ion-item>
-
-		  	<ion-card color="theme">
-			  <ion-card-header>
-			    Evaluation Form
-			  </ion-card-header>
-			</ion-card>
-
-
-			<ion-item>
-			    <ion-label>Select evaluate</ion-label>
-			    <ion-select [(ngModel)]="evaluate">
-			      <ion-option value="1">Satisfy</ion-option>
-			      <ion-option value="2">Unsatisfy</ion-option>
-			    </ion-select>
-			  </ion-item>
-
-			<ion-item>
-			    <ion-label>Remark :</ion-label>
-			    <ion-input type="text"></ion-input>
-		  	</ion-item>
-
-		  	<hr>
-
-
-		  	<ion-card color="theme">
-			  <ion-card-header>
-			    Status Message
-			  </ion-card-header>
-			</ion-card>
-
-			<ion-card>
-			  <ion-card-header>
-			    2017-04-30
-			  </ion-card-header>
-			  <ion-card-content>
-			    irst Appointment Date: 2017-04-14, [15:00 - 16:00]
-Second Appointment Date: 2017-04-20, [10:00 - 12:00]
-Optional Choice:
-			  </ion-card-content>
-			</ion-card>
-
-			<ion-card>
-			  <ion-card-header>
-			    2017-04-30
-			  </ion-card-header>
-			  <ion-card-content>
-			    re appointment
-			  </ion-card-content>
-			</ion-card>
-
-			
-
 </ion-content>

@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
 import { AlertController } from 'ionic-angular';
+import { MovingStuff, MovingStuffProvider } from '../../providers/moving-stuff/moving-stuff';
 
 /**
  * Generated class for the StuffmovinghistoryPage page.
@@ -15,8 +16,13 @@ import { AlertController } from 'ionic-angular';
 })
 export class StuffmovinghistoryPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams
-  	,public alertCtrl: AlertController) {
+  movList: MovingStuff[] = [];
+
+  constructor(public navCtrl: NavController, 
+              public navParams: NavParams,
+              public alertCtrl: AlertController,
+              public movProv: MovingStuffProvider) {
+    this.movProv.loadMov().subscribe(data => { this.movList = data });
   }
 
   ionViewDidLoad() {

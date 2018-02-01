@@ -24,17 +24,19 @@
 	</ion-card>
 
 	<ion-list>
-	  <ion-item>
-		    <h2>Request ID : 9</h2>
-		    <p>Name : Adinan Soseesuk</p>
-		    <p>Status : Approve</p>
-		    <p>Date : 2017-09-21</p>
-		    <p>Topic : Noisy2</p>
-		    <p>Desc : <marquee>The room next to me</marquee></p>
-		    <p>Remark : ระบบได้รับเรื่องของท่านแล้ว</p>
-		    <br>
+	  <ion-item *ngFor="let dec of decList">
+		    <h2>Request ID : {{dec.id}}</h2>
+		    <p>Name : {{dec.usName}}</p>
+		    <div *ngIf="dec.status; else showFalse">Status : APPROVED</div>
+				<ng-template #showFalse>Status : IN PROCESS</ng-template>
+				<p>Request Date : {{dec.reqDate}}</p>
+				<p>Period : {{dec.start}} to {{dec.end}}</p>
+		    <p>Desc : <marquee>{{dec.desc}}</marquee></p>
+				<br>
+				<!--
 		    <button ion-button color="correct">Edit</button>
-		    <button ion-button color="danger" (click)='showalertdelete()'>Delete</button>
+				<button ion-button color="danger" (click)='showalertdelete()'>Delete</button>
+				-->
 		</ion-item>
 	</ion-list>
 	<hr>

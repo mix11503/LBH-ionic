@@ -38,7 +38,7 @@ export class MaintenanceReqProvider {
   }
 
   loadMTN(): Observable<MaintenanceReq[]>{
-    return  this.http.get(this.conn.severPathAPI+'/MTN?roomId=202')
+    return  this.http.get(this.conn.severPathAPI+'/MTN?roomId='+this.user.roomId)
               //{
                 //roomId: this.user.roomId
               //})

@@ -27,8 +27,8 @@ export class MtnhistoryPage {
     this.mtnProv.loadMTN().subscribe(data => { this.mtnList = data });
   }
 
-   MtnhistoryshowPage(){
-  	this.navCtrl.push(MtnhistoryshowPage);
+   MtnhistoryshowPage(mtn: any){
+  	this.navCtrl.push(MtnhistoryshowPage,{mtn: mtn});
   }
 
 }

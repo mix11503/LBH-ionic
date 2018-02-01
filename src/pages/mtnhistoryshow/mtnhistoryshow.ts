@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { MaintenanceReq } from '../../providers/maintenance-req/maintenance-req';
 
 /**
  * Generated class for the MtnhistoryshowPage page.
@@ -15,7 +16,10 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class MtnhistoryshowPage {
 
+  mtnReq: MaintenanceReq;
+
   constructor(public navCtrl: NavController, public navParams: NavParams) {
+    this.mtnReq = this.navParams.get("mtn");
   }
 
   ionViewDidLoad() {

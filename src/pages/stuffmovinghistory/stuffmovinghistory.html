@@ -19,15 +19,19 @@
 <ion-content padding>
 
 	<ion-list>
-	  <ion-item>
-		    <h2>Request ID : 9</h2>
-		    <p>Name : Adinan Soseesuk</p>
-		    <p>Status : Approve</p>
-		    <p>Date : 2017-09-21</p>
-		    <p>Desc : <marquee>The room next to me</marquee></p>
-		    <p>Type</p>
-		    <p>To Move Date	: 2017-10-13 15:02</p>
-		    <button ion-button color="danger" (click)='showalertdelete()'>Delete</button>
+	  <ion-item *ngFor="let mov of movList">
+		    <h2>Request ID : {{mov.id}}</h2>
+		    <p>Name : {{mov.usName}}</p>
+		    <div *ngIf="mov.status; else showFalse">Status : APPROVED</div>
+				<ng-template #showFalse>Status : IN PROCESS</ng-template>
+		    <p>Request Date : {{mov.reqDate}}</p>
+		    <p>Desc : <marquee>{{mov.remark}}</marquee></p>
+		    <div *ngIf="mov.inOrOut; else showFalse">Type : Move In</div>
+				<ng-template #showFalse>Type : Move Out</ng-template>
+				<p>To Move Date	: {{mov.dateMove}}</p>
+				<!--
+				<button ion-button color="danger" (click)='showalertdelete()'>Delete</button>
+				-->
 		</ion-item>
 	</ion-list>
 	<hr>

@@ -30,8 +30,8 @@
 		    <p>Date : {{pbm.reqDate}}</p>
 		    <p>Topic : {{pbm.topic}}</p>
 		    <p>Desc : <marquee>{{pbm.desc}}</marquee></p>
-				Remark : <div *ngIf="pbm.status; else showFalse">เจ้าหน้าที่ได้รับทราบปัญหาของท่านแล้ว และจะดำเนินการแก้ไขต่อไป</div>
-								<ng-template #showFalse>ระบบได้รับเรื่องของท่านแล้ว</ng-template>
+				<div *ngIf="pbm.status; else showFalse">Remark : ระบบได้รับเรื่องของท่านแล้ว</div>
+				<ng-template #showFalse>Remark : เจ้าหน้าที่ได้รับทราบปัญหาของท่านแล้ว และจะดำเนินการแก้ไขต่อไป</ng-template>
 		</ion-item>
 	</ion-list>
 </ion-content>
